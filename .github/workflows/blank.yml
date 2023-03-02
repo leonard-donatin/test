@@ -72,4 +72,8 @@ jobs:
           esac
           echo "MANIFEST=$(echo $MANIFEST)" >> $GITHUB_OUTPUT
           echo "ENVIRONMENT=$(echo $ENVIRONMENT)" >> $GITHUB_OUTPUT
+      - name: Get env
+        run: |
+          echo "Manifest is ${{ steps.vars.outputs.MANIFEST }}"
+          echo "Environment is ${{ steps.vars.outputs.ENVIRONMENT }}"
 
